@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reserve Your Appointment | Glow &amp; Grace Salon Bandra West</title>
+  <meta name="description" content="Book your bespoke beauty or spa appointment at Glow &amp; Grace Salon, Bandra West, Mumbai. Instant confirmation, personalized time slots, and VIP WhatsApp concierge.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            blush: '#F8C8DC',
+            'blush-light': '#FDF2F5',
+            'blush-deep': '#F3A8C5',
+            gold: '#D4AF37',
+            'gold-light': '#F3E5AB',
+            'gold-dark': '#B8860B',
+            beige: '#F5F0EB',
+            'beige-light': '#FAF8F5',
+            charcoal: '#2C2C2C',
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', '"Cormorant Garamond"', 'Georgia', 'serif'],
+            display: ['"Cormorant Garamond"', '"Playfair Display"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
+</head>
+<body class="bg-beige-light text-charcoal font-sans antialiased selection:bg-blush selection:text-charcoal">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-gradient-to-r from-[#2C2C2C] via-[#382F33] to-[#2C2C2C] text-[#F3E5AB] text-xs py-2 px-4 border-b border-[#D4AF37]/30">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-[#D4AF37] animate-ping"></span>
+        <span>✨ Welcome to <strong>Glow &amp; Grace Salon</strong> • 42, Rosewood Avenue, Bandra West, Mumbai</span>
+      </div>
+      <div class="flex items-center gap-4 text-xs">
+        <span class="hidden md:inline">🕒 Mon-Sat: 10AM - 8PM | Sun: 11AM - 6PM</span>
+        <a href="tel:+919876543210" class="hover:text-white transition-colors flex items-center gap-1 text-[#F8C8DC]">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          <span>+91 98765 43210</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header id="mainHeader" class="sticky top-0 z-50 transition-all duration-300 glass-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Logo -->
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-[#D4AF37] via-[#F8C8DC] to-[#D4AF37] p-[1.5px] shadow-sm">
+            <div class="w-full h-full rounded-full bg-white flex items-center justify-center">
+              <span class="font-serif font-bold text-xl text-gold-dark group-hover:scale-110 transition-transform">G</span>
+            </div>
+          </div>
+          <div>
+            <span class="font-serif text-2xl font-semibold tracking-wide text-charcoal block leading-none">Glow &amp; Grace</span>
+            <span class="text-[0.65rem] tracking-[0.25em] uppercase text-gold-dark font-medium block mt-1">Salon &bull; Bandra West</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center space-x-8">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="services.html" class="nav-link">Services</a>
+          <a href="team.html" class="nav-link">Our Team</a>
+          <a href="gallery.html" class="nav-link">Gallery</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+
+        <!-- Right CTA Button -->
+        <div class="hidden sm:flex items-center gap-4">
+          <a href="book.html" class="btn-primary">
+            <span>Book Appointment</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <div class="flex lg:hidden items-center">
+          <button id="mobileMenuToggle" aria-label="Toggle Navigation Menu" class="p-2 rounded-xl text-charcoal hover:bg-stone-100 transition-colors">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-[#D4AF37]/20 bg-white/95 backdrop-blur-xl px-4 pt-3 pb-6 space-y-3 shadow-xl">
+      <a href="index.html" class="mobile-nav-link block px-3 py-2.5 rounded-xl font-medium text-charcoal hover:bg-[#FDF2F5] hover:text-gold-dark transition-colors">Home</a>
+      <a href="services.html" class="mobile-nav-link block px-3 py-2.5 rounded-xl font-medium text-charcoal hover:bg-[#FDF2F5] hover:text-gold-dark transition-colors">Services Menu</a>
+      <a href="team.html" class="mobile-nav-link block px-3 py-2.5 rounded-xl font-medium text-charcoal hover:bg-[#FDF2F5] hover:text-gold-dark transition-colors">Our Team</a>
+      <a href="gallery.html" class="mobile-nav-link block px-3 py-2.5 rounded-xl font-medium text-charcoal hover:bg-[#FDF2F5] hover:text-gold-dark transition-colors">Portfolio &amp; Gallery</a>
+      <a href="contact.html" class="mobile-nav-link block px-3 py-2.5 rounded-xl font-medium text-charcoal hover:bg-[#FDF2F5] hover:text-gold-dark transition-colors">Contact &amp; Location</a>
+      <div class="pt-2">
+        <a href="book.html" class="btn-primary w-full text-center py-3">Book Appointment Now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header Banner -->
+  <section class="relative py-16 bg-gradient-to-b from-[#FDF2F5] to-beige-light border-b border-[#D4AF37]/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+      <span class="gold-badge">Private Reservation</span>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold font-serif text-charcoal">
+        Book Your Luxury Appointment
+      </h1>
+      <div class="gold-divider"></div>
+      <p class="text-stone-600 max-w-xl mx-auto text-base">
+        Select your ritual, desired date, and preferred master artist. We will confirm your reservation instantly.
+      </p>
+    </div>
+  </section>
+
+  <!-- Booking Main Section -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Left Column: The Interactive Booking Form -->
+        <div class="lg:col-span-8 bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-[#D4AF37]/30 relative overflow-hidden">
+          
+          <div class="flex items-center justify-between pb-6 mb-8 border-b border-stone-200">
+            <div>
+              <h2 class="font-serif text-2xl sm:text-3xl font-bold text-charcoal">Guest Details &amp; Schedule</h2>
+              <p class="text-xs text-stone-500 mt-1">Fields marked with <span class="text-red-500 font-bold">*</span> are required.</p>
+            </div>
+            <span class="hidden sm:inline-flex items-center gap-1.5 text-xs text-gold-dark font-medium bg-[#FAF5E8] px-3 py-1 rounded-full border border-[#D4AF37]/30">
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Slots Open Today
+            </span>
+          </div>
+
+          <!-- Form Element -->
+          <form id="bookingForm" class="space-y-6" novalidate>
+            
+            <!-- Row 1: Name and Phone -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="bookingName" class="form-label">Full Name <span class="req">*</span></label>
+                <input 
+                  type="text" 
+                  id="bookingName" 
+                  name="fullName" 
+                  required 
+                  placeholder="e.g. Radhika Mehra" 
+                  class="form-input"
+                />
+              </div>
+
+              <div>
+                <label for="bookingPhone" class="form-label">Phone Number <span class="req">*</span></label>
+                <input 
+                  type="tel" 
+                  id="bookingPhone" 
+                  name="phoneNumber" 
+                  required 
+                  placeholder="+91 98765 43210" 
+                  class="form-input"
+                />
+              </div>
+            </div>
+
+            <!-- Row 2: Email and Service Selection -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="bookingEmail" class="form-label">Email Address (Optional)</label>
+                <input 
+                  type="email" 
+                  id="bookingEmail" 
+                  name="email" 
+                  placeholder="radhika@example.com" 
+                  class="form-input"
+                />
+              </div>
+
+              <div>
+                <label for="bookingService" class="form-label">Select Service <span class="req">*</span></label>
+                <select id="bookingService" name="service" required class="form-select font-medium text-stone-800">
+                  <option value="" disabled selected>— Choose from Luxury Menu —</option>
+                  <!-- Dynamically populated and enriched by js/booking.js with optgroups -->
+                  <optgroup label="Hair Services">
+                    <option value="Signature Haircut & Blowout Styling">Signature Haircut &amp; Blowout Styling (₹1,800 • 60 mins)</option>
+                    <option value="French Balayage & Gloss Color">French Balayage &amp; Gloss Color (₹5,500 • 150 mins)</option>
+                    <option value="Brazilian Keratin Infusion Therapy">Brazilian Keratin Infusion Therapy (₹6,800 • 180 mins)</option>
+                    <option value="Botanical Deep Conditioning Hair Spa">Botanical Deep Conditioning Hair Spa (₹2,400 • 75 mins)</option>
+                  </optgroup>
+                  <optgroup label="Skin Services">
+                    <option value="Hydrating Rose Clean-Up">Hydrating Rose Clean-Up (₹1,600 • 45 mins)</option>
+                    <option value="Glow & Grace Signature 24K Gold Facial">Glow &amp; Grace Signature 24K Gold Facial (₹3,800 • 75 mins)</option>
+                    <option value="Cellular Anti-Aging Collagen Therapy">Cellular Anti-Aging Collagen Therapy (₹4,500 • 90 mins)</option>
+                    <option value="Diamond Microdermabrasion & Brightening">Diamond Microdermabrasion &amp; Brightening (₹3,200 • 60 mins)</option>
+                  </optgroup>
+                  <optgroup label="Nail Services">
+                    <option value="Royal Rose Petal Manicure">Royal Rose Petal Manicure (₹1,200 • 45 mins)</option>
+                    <option value="Deluxe Aromatherapy Pedicure">Deluxe Aromatherapy Pedicure (₹1,600 • 60 mins)</option>
+                    <option value="Premium Gel Extensions & Chrome Finish">Premium Gel Extensions &amp; Chrome Finish (₹2,800 • 90 mins)</option>
+                    <option value="Bespoke Hand-Painted Bridal Nail Art">Bespoke Hand-Painted Bridal Nail Art (₹2,200 • 60 mins)</option>
+                  </optgroup>
+                  <optgroup label="Spa Treatments">
+                    <option value="Swedish Harmony Full Body Massage">Swedish Harmony Full Body Massage (₹3,200 • 60 mins)</option>
+                    <option value="Sensual Jasmine & Lavender Aromatherapy">Sensual Jasmine &amp; Lavender Aromatherapy (₹3,800 • 75 mins)</option>
+                    <option value="Himalayan Pink Salt & Rose Body Polish">Himalayan Pink Salt &amp; Rose Body Polish (₹3,400 • 60 mins)</option>
+                    <option value="Ultimate Serenity Couple Spa Ritual">Ultimate Serenity Couple Spa Ritual (₹6,500 • 120 mins)</option>
+                  </optgroup>
+                </select>
+              </div>
+            </div>
+
+            <!-- Row 3: Preferred Date and Preferred Time -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="bookingDate" class="form-label">Preferred Date <span class="req">*</span></label>
+                <input 
+                  type="date" 
+                  id="bookingDate" 
+                  name="appointmentDate" 
+                  required 
+                  class="form-input cursor-pointer"
+                />
+              </div>
+
+              <div>
+                <label for="bookingTime" class="form-label">Preferred Time Slot (10 AM – 7 PM) <span class="req">*</span></label>
+                <select id="bookingTime" name="timeSlot" required class="form-select font-medium text-stone-800">
+                  <option value="" disabled selected>— Select an Hourly Time Slot —</option>
+                  <option value="10:00 AM">10:00 AM (Morning Radiance)</option>
+                  <option value="11:00 AM">11:00 AM</option>
+                  <option value="12:00 PM">12:00 PM</option>
+                  <option value="1:00 PM">01:00 PM (Afternoon Glow)</option>
+                  <option value="2:00 PM">02:00 PM</option>
+                  <option value="3:00 PM">03:00 PM</option>
+                  <option value="4:00 PM">04:00 PM (Tea &amp; Tranquility)</option>
+                  <option value="5:00 PM">05:00 PM</option>
+                  <option value="6:00 PM">06:00 PM (Sunset Serenity)</option>
+                  <option value="7:00 PM">07:00 PM (Evening Unwind)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Row 4: Preferred Stylist (Bonus) -->
+            <div>
+              <label for="bookingStylist" class="form-label">Preferred Stylist or Therapist (Optional)</label>
+              <select id="bookingStylist" name="stylist" class="form-select font-medium text-stone-800">
+                <option value="Any Available Master Stylist" selected>Any Available Master Artist</option>
+                <option value="Ananya Sharma (Creative Director & Hair Stylist)">Ananya Sharma — Creative Director &amp; Hair Couturier</option>
+                <option value="Priya Nair (Senior Clinical Aesthetician)">Priya Nair — Senior Clinical Aesthetician (Skin &amp; Facials)</option>
+                <option value="Elena Rostova (Master Nail Sculptor)">Elena Rostova — Master Nail Sculptor</option>
+                <option value="Meera Sen (Ayurvedic & Swedish Body Therapist)">Meera Sen — Holistic Spa Therapist</option>
+                <option value="Kavita Deshmukh (Bridal Makeup & Draping Lead)">Kavita Deshmukh — Bridal Makeup Lead</option>
+              </select>
+            </div>
+
+            <!-- Row 5: Notes & Special Requests -->
+            <div>
+              <label for="bookingNotes" class="form-label">Special Requests / Bridal Notes / Skin Allergies</label>
+              <textarea 
+                id="bookingNotes" 
+                name="specialRequests" 
+                rows="3" 
+                placeholder="Let us know about color preferences, scalp sensitivity, upcoming bridal events, or specific beverage requests (e.g. green tea / sparkling water)." 
+                class="form-textarea resize-none"
+              ></textarea>
+            </div>
+
+            <!-- Submit Button & Trust Guarantee -->
+            <div class="pt-4 space-y-4">
+              <button type="submit" class="btn-primary w-full py-4 text-base tracking-wider shadow-xl">
+                <span>Confirm &amp; Reserve Appointment</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              </button>
+              
+              <div class="flex items-center justify-center gap-6 text-xs text-stone-500 pt-2">
+                <span class="flex items-center gap-1.5">
+                  <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                  Zero Cancellation Fee (up to 2 hrs prior)
+                </span>
+                <span class="flex items-center gap-1.5">
+                  <svg class="w-4 h-4 text-gold-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  Instant WhatsApp Confirmation
+                </span>
+              </div>
+            </div>
+
+          </form>
+
+        </div>
+
+        <!-- Right Column: Salon Perks & Recent Bookings -->
+        <div class="lg:col-span-4 space-y-8">
+          
+          <!-- VIP Sanctuary Promise Card -->
+          <div class="bg-gradient-to-br from-[#FAF8F5] via-white to-[#FDF2F5] rounded-3xl p-8 border border-[#D4AF37]/30 shadow-md space-y-6">
+            <span class="gold-badge">The Sanctuary Experience</span>
+            <h3 class="font-serif text-2xl font-bold text-charcoal">What to Expect</h3>
+
+            <div class="space-y-4 text-xs text-stone-600">
+              <div class="flex items-start gap-3">
+                <div class="w-7 h-7 rounded-full bg-[#FAF5E8] text-[#B8860B] flex items-center justify-center shrink-0 font-serif font-bold">1</div>
+                <div>
+                  <h4 class="font-serif font-bold text-charcoal text-sm">Welcome In-Suite Beverage</h4>
+                  <p class="mt-0.5">Choice of chilled Kashmiri kahwa, lavender-infused sparkling water, or organic chamomile tea.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div class="w-7 h-7 rounded-full bg-[#FAF5E8] text-[#B8860B] flex items-center justify-center shrink-0 font-serif font-bold">2</div>
+                <div>
+                  <h4 class="font-serif font-bold text-charcoal text-sm">Complimentary Consultation</h4>
+                  <p class="mt-0.5">Your master artist analyzes skin tones, facial symmetry, or hair texture before beginning.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div class="w-7 h-7 rounded-full bg-[#FAF5E8] text-[#B8860B] flex items-center justify-center shrink-0 font-serif font-bold">3</div>
+                <div>
+                  <h4 class="font-serif font-bold text-charcoal text-sm">Valet &amp; Private Parking</h4>
+                  <p class="mt-0.5">Complimentary curbside valet service right at 42, Rosewood Avenue, Bandra West.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Direct Concierge Help -->
+            <div class="pt-4 border-t border-stone-200">
+              <p class="text-xs text-stone-500 mb-2">Prefer to book over the phone?</p>
+              <a href="tel:+919876543210" class="flex items-center gap-2 font-serif font-bold text-charcoal hover:text-gold-dark text-base">
+                <svg class="w-4 h-4 text-[#D4AF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                <span>+91 98765 43210</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- My Recent Appointments (LocalStorage feature) -->
+          <div class="bg-white rounded-3xl p-6 border border-stone-200 shadow-sm">
+            <h3 class="font-serif text-lg font-bold text-charcoal mb-1 flex items-center gap-2">
+              <span>Your Reserved Bookings</span>
+            </h3>
+            <p class="text-xs text-stone-500 mb-4">Saved locally on this device for your convenience.</p>
+            
+            <div id="recentBookingsContainer" class="space-y-3">
+              <!-- Rendered via js/booking.js -->
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Elegant Booking Success Modal -->
+  <div id="bookingSuccessModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalClientName">
+    <div class="modal-card p-8 sm:p-10 relative">
+      
+      <!-- Top Decorative Ribbon -->
+      <div class="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-[#D4AF37] via-[#F8C8DC] to-[#D4AF37]"></div>
+
+      <div class="text-center space-y-4">
+        
+        <div class="w-16 h-16 rounded-full bg-[#FAF5E8] text-[#B8860B] border-2 border-[#D4AF37] mx-auto flex items-center justify-center text-3xl shadow-md">
+          ✨
+        </div>
+
+        <div>
+          <span class="gold-badge text-[0.7rem]">Reservation Confirmed</span>
+          <h3 class="font-serif text-2xl sm:text-3xl font-bold text-charcoal mt-2">
+            Thank You, <span id="modalClientName" class="text-gold-dark">Guest</span>!
+          </h3>
+          <p class="text-xs text-stone-500 mt-1">We are delighted to welcome you to Glow &amp; Grace Salon.</p>
+        </div>
+
+        <!-- Appointment Receipt Box -->
+        <div class="bg-[#FAF8F5] rounded-2xl p-5 border border-[#D4AF37]/30 text-left space-y-2.5 text-xs text-stone-700">
+          <div class="flex items-center justify-between pb-2 border-b border-stone-200">
+            <span class="text-stone-500">Booking Reference:</span>
+            <strong id="modalRefId" class="font-mono text-sm font-bold text-gold-dark">GG-00000</strong>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="text-stone-500">Reserved Ritual:</span>
+            <strong id="modalService" class="font-semibold text-charcoal">Service Name</strong>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="text-stone-500">Date &amp; Time:</span>
+            <strong id="modalDateTime" class="font-semibold text-charcoal">Date at Time</strong>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="text-stone-500">Estimated Total:</span>
+            <strong id="modalPrice" class="font-semibold text-gold-dark font-serif text-sm">₹0,000</strong>
+          </div>
+          <div class="pt-2 border-t border-stone-200 text-[0.7rem] text-stone-500">
+            📍 Glow &amp; Grace Salon, 42, Rosewood Avenue, Bandra West, Mumbai – 400050.
+          </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="pt-2 space-y-3">
+          <a 
+            id="modalWhatsAppBtn" 
+            href="#" 
+            target="_blank" 
+            class="w-full flex items-center justify-center gap-2 bg-[#25D366] text-white font-semibold text-xs py-3.5 px-4 rounded-full shadow-md hover:bg-[#20BA5A] transition-all"
+          >
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.004 2c-5.522 0-9.996 4.477-9.996 9.997 0 1.77.462 3.497 1.34 5.02L2 22l5.127-1.314c1.472.802 3.125 1.226 4.814 1.226 5.523 0 10-4.477 10-9.997 0-5.52-4.477-9.996-10-9.996zm0 18.232c-1.524 0-3.023-.41-4.333-1.185l-.311-.184-3.218.825.86-3.136-.201-.32c-.852-1.356-1.303-2.929-1.303-4.542 0-4.544 3.697-8.241 8.242-8.241 4.544 0 8.242 3.697 8.242 8.241 0 4.544-3.698 8.242-8.243 8.242z"/></svg>
+            <span>Send Details to Salon WhatsApp</span>
+          </a>
+
+          <div class="grid grid-cols-2 gap-3">
+            <button 
+              id="modalCalendarBtn" 
+              type="button" 
+              class="w-full py-2.5 px-3 rounded-full border border-stone-300 text-xs font-semibold text-charcoal hover:bg-stone-100 transition-colors"
+            >
+              📅 Save to Calendar (.ics)
+            </button>
+            <button 
+              type="button" 
+              onclick="closeBookingModal()" 
+              class="w-full py-2.5 px-3 rounded-full bg-stone-900 text-white text-xs font-semibold hover:bg-black transition-colors"
+            >
+              Done &amp; Close
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-[#1F1B1D] text-stone-300 pt-16 pb-12 border-t border-[#D4AF37]/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-stone-800">
+        
+        <!-- Brand Info -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-[#D4AF37] to-[#F8C8DC] p-[1.5px]">
+              <div class="w-full h-full rounded-full bg-[#1F1B1D] flex items-center justify-center text-gold font-serif font-bold">G</div>
+            </div>
+            <div>
+              <span class="font-serif text-xl font-bold text-white block">Glow &amp; Grace</span>
+              <span class="text-[0.6rem] tracking-[0.2em] uppercase text-gold block">Salon &bull; Bandra West</span>
+            </div>
+          </div>
+          <p class="text-xs text-stone-400 leading-relaxed">
+            Where Beauty Meets Grace. Mumbai’s distinguished luxury destination for bespoke hair transformations, clinical skin radiance, and restorative holistic spa experiences.
+          </p>
+          <div class="flex items-center gap-3 pt-2">
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="w-8 h-8 rounded-full bg-white/10 hover:bg-[#D4AF37] hover:text-white flex items-center justify-center transition-colors text-xs text-stone-300">ig</a>
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook" class="w-8 h-8 rounded-full bg-white/10 hover:bg-[#D4AF37] hover:text-white flex items-center justify-center transition-colors text-xs text-stone-300">fb</a>
+            <a href="https://pinterest.com" target="_blank" aria-label="Pinterest" class="w-8 h-8 rounded-full bg-white/10 hover:bg-[#D4AF37] hover:text-white flex items-center justify-center transition-colors text-xs text-stone-300">pin</a>
+            <a href="https://wa.me/919876543210?text=Hello%20Glow%20%26%20Grace%20Salon%2C%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" aria-label="WhatsApp" class="w-8 h-8 rounded-full bg-emerald-600/30 hover:bg-emerald-600 hover:text-white flex items-center justify-center transition-colors text-xs text-emerald-400">wa</a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="font-serif text-white font-semibold text-base mb-4 tracking-wide">Privileged Navigation</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="index.html" class="hover:text-gold transition-colors">Home Experience</a></li>
+            <li><a href="services.html" class="hover:text-gold transition-colors">Signature Services Menu</a></li>
+            <li><a href="team.html" class="hover:text-gold transition-colors">Our Master Stylists</a></li>
+            <li><a href="gallery.html" class="hover:text-gold transition-colors">Artistry Portfolio &amp; Gallery</a></li>
+            <li><a href="book.html" class="hover:text-gold transition-colors">Book an Appointment</a></li>
+            <li><a href="contact.html" class="hover:text-gold transition-colors">Contact &amp; Directions</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Details -->
+        <div>
+          <h4 class="font-serif text-white font-semibold text-base mb-4 tracking-wide">Sanctuary Address</h4>
+          <p class="text-xs text-stone-400 leading-relaxed mb-3">
+            <strong>Glow &amp; Grace Salon</strong><br>
+            42, Rosewood Avenue, Bandra West,<br>
+            Mumbai – 400050, Maharashtra, India
+          </p>
+          <p class="text-xs text-stone-400 mb-1">
+            <strong>Phone:</strong> <a href="tel:+919876543210" class="hover:text-gold text-stone-300">+91 98765 43210</a>
+          </p>
+          <p class="text-xs text-stone-400">
+            <strong>Email:</strong> <a href="mailto:hello@glowandgrace.in" class="hover:text-gold text-stone-300">hello@glowandgrace.in</a>
+          </p>
+        </div>
+
+        <!-- Opening Hours & VIP Club -->
+        <div>
+          <h4 class="font-serif text-white font-semibold text-base mb-4 tracking-wide">Hours of Grace</h4>
+          <div class="text-xs text-stone-400 space-y-1 mb-4">
+            <p><span class="text-stone-300 font-medium">Monday – Saturday:</span> 10:00 AM – 8:00 PM</p>
+            <p><span class="text-stone-300 font-medium">Sunday:</span> 11:00 AM – 6:00 PM</p>
+          </div>
+
+          <form id="newsletterForm" class="space-y-2">
+            <label class="block text-[0.7rem] uppercase tracking-wider text-stone-400">Join the VIP Privileged Circle</label>
+            <div class="flex">
+              <input type="email" required placeholder="Enter your email" class="bg-stone-900 border border-stone-700 text-xs px-3 py-2 rounded-l-xl w-full text-white focus:outline-none focus:border-gold">
+              <button type="submit" class="bg-gradient-to-r from-[#D4AF37] to-[#B8860B] text-white px-3 py-2 text-xs font-semibold rounded-r-xl hover:opacity-90 transition-opacity">Join</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Copyright -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-500 gap-4">
+        <p>&copy; 2026 Glow &amp; Grace Salon. All Rights Reserved. Mumbai – 400050.</p>
+        <p class="text-stone-400 flex items-center gap-1">
+          <span>Crafted with grace for your beauty journey</span>
+          <span class="text-blush">♥</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a 
+    href="https://wa.me/919876543210?text=Hello%20Glow%20%26%20Grace%20Salon%2C%20I%20would%20like%20to%20book%20an%20appointment." 
+    target="_blank" 
+    rel="noopener noreferrer"
+    class="floating-whatsapp"
+    title="Chat with Glow & Grace Concierge"
+    id="floatingWhatsAppBtn"
+  >
+    <div class="pulse-ring"></div>
+    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.668-.7c.969.54 2.083.825 3.212.825h.005c3.179 0 5.766-2.587 5.767-5.767.001-3.18-2.585-5.769-5.766-5.769zm3.364 8.163c-.14.394-.799.742-1.109.789-.31.047-.698.066-1.133-.075-.436-.141-1.002-.329-1.745-.729-1.284-.69-2.115-1.996-2.179-2.082-.064-.086-.523-.697-.523-1.328 0-.632.33-.943.447-1.066.118-.124.257-.155.343-.155.086 0 .172 0 .248.006.079.006.185-.03.289.221.107.258.368.898.401.964.033.066.054.144.01.23-.043.086-.065.14-.13.215-.065.076-.137.169-.196.228-.065.065-.133.136-.057.267.076.131.338.558.725.903.498.444.918.581 1.049.646.131.065.207.054.284-.033.076-.086.327-.38.414-.51.087-.131.174-.109.294-.065.12.043.763.36 1.046.491.283.131.472.218.541.327.069.109.069.632-.071 1.026z"/>
+      <path d="M12.004 2c-5.522 0-9.996 4.477-9.996 9.997 0 1.77.462 3.497 1.34 5.02L2 22l5.127-1.314c1.472.802 3.125 1.226 4.814 1.226 5.523 0 10-4.477 10-9.997 0-5.52-4.477-9.996-10-9.996zm0 18.232c-1.524 0-3.023-.41-4.333-1.185l-.311-.184-3.218.825.86-3.136-.201-.32c-.852-1.356-1.303-2.929-1.303-4.542 0-4.544 3.697-8.241 8.242-8.241 4.544 0 8.242 3.697 8.242 8.241 0 4.544-3.698 8.242-8.243 8.242z"/>
+    </svg>
+    <span class="hidden sm:inline">WhatsApp Concierge</span>
+  </a>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/booking.js"></script>
+</body>
+</html>
